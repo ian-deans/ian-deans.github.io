@@ -1,0 +1,133 @@
+
+/* Colors */
+$color-alternate-background:  #212F4B;
+$color-background:            #17181A;
+$color-font-main-secondary:   #584b62;
+$color-font-main:             #8d979f;
+$color-font-header:           #bada55;
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Righteous|Roboto');
+$font-righteous: 'Righteous', cursive;
+$font-roboto: 'Roboto', sans-serif;
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  //border: dotted #ff0000 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-font-header;
+  font-family: $font-righteous;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-background;
+  font-family: $font-roboto;
+  color: $color-font-main;
+  font-size: 12px;
+}
+
+.frame {
+  min-width: 98%;
+
+  &.navbar {
+    height: 16vh;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.75em;
+    color: $color-font-header;
+    font-family: $font-righteous;
+  }
+
+  &.project-tabs {
+    height: 50vh;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.project-info {
+    height: 22vh;
+    min-height: 100px;
+    min-width: 90%;
+    box-shadow: 2px 2px 2px 2px red;
+    //background-color: $color-alternate-background;
+    padding: 20px;
+  }
+}
+
+.btn-toggle-twitter {
+  min-width: 90%;
+  max-width: 90%;
+  min-height: 25px;
+  background-color: $color-font-main-secondary;
+}
+
+
+.thumbnail {
+  height: 250px;
+  width: 200px;
+  box-shadow: 2px 2px 2px 2px;
+  transform: translateZ(2em) translateX(200px);
+  &:hover {
+    background-color: red;
+    border: solid red 1px;
+  }
+
+  &.tetris {
+    background-image: url("../tetrisThumbnail.png");
+    background-size:  cover;
+  }
+}
+
+/*************************************************/
+
+.navbar-container {
+  width: 95%;
+  min-height: 100%;
+  //background-color: $color-alternate-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.navbar-subcontainer {
+  display: flex;
+  flex-direction: row;
+  &.top {
+  justify-content: space-between;
+  }
+  &.bottom {
+    justify-content: center;
+  }
+}
+
+.menu-contact {
+  background-color: $color-background !important;
+  color: $color-font-header !important;
+  font-family: $font-roboto !important;
+  font-size: .75em !important;
+  border: solid $color-alternate-background 1px;
+}
+
+.menu-item {
+  color: $color-font-header !important;
+}
+
+.popover-button {
+  background-color: $color-background !important;
+  color: $color-font-header !important;
+  max-width: 30%;
+}
