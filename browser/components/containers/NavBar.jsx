@@ -1,6 +1,7 @@
 import React from 'react';
 import PopoverButton from './PopoverButton.jsx'
 import TwitterFeed from './TwitterFeed.jsx'
+import FlatButton from 'material-ui/FlatButton'
 
 const NavBar = props => {
   return (
@@ -13,8 +14,8 @@ const NavBar = props => {
         <TwitterFeed />
       </div>
       <div className="navbar-subcontainer bottom">
-        <div>Home</div>
-        <div>About Me</div>
+        <FlatButton label="Home"/>
+        <FlatButton label="About Me"/>
       </div>
     </div>
   )
