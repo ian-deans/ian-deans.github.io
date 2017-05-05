@@ -1,12 +1,12 @@
 import React from 'react'
-import ProjectThumbnailContainer from '../containers/ProjectThumbnailContainer.jsx'
+import ProjectCardContainer from '../containers/ProjectCardContainer.jsx'
 
-const ProjectThumbnailFrame = props => {
+const ProjectCardFrame = props => {
   return (
-    <div className={props.cssClass}>
-      <ProjectThumbnailContainer />
+    <div className={props.frameClass}>
+      <ProjectCardContainer imgPath={props.imgPath}/>
     </div>
   )
 }
 
-export default ProjectThumbnailFrame
+export default ProjectCardFrame

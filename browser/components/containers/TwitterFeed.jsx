@@ -23,7 +23,14 @@ export default class TwitterFeed extends React.Component {
           swipeAreaWidth={30}
           className="twitter-feed-drawer"
         >
-          <AppBar title="Twitter" className="twitter-feed-bar" />
+          <AppBar
+            className="twitter-feed-bar"
+            title="Twitter"
+            onTitleTouchTap={this.handleToggle}
+            showMenuIconButton={false}
+          >
+
+          </AppBar>
         </Drawer>
       </div>
     )

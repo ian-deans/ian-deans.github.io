@@ -1,6 +1,7 @@
 /* Colors */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Righteous|Roboto");
+/* Measurements */
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,59 +17,80 @@ h1, h2, h3, h4, h5, h6 {
   color: #8d979f;
   height: 100vh;
   width: 100vw;
+  min-height: 480px;
+  min-width: 320px;
   font-size: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center; }
 
 .frame {
-  min-width: 98%;
+  min-width: 95%;
   display: flex;
   flex-direction: column; }
   .frame.navbar {
     color: #bada55;
     font-family: "Righteous", cursive;
-    height: 16vh;
+    max-height: 85px;
     min-height: 48px;
     display: flex;
     justify-content: center;
     font-size: 1.75em; }
   .frame.project-tabs {
-    height: 50vh;
-    min-height: 250px;
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around; }
-  .frame.project-info {
-    height: 22vh;
-    min-height: 100px;
-    min-width: 90%;
-    box-shadow: 2px 2px red;
-    padding: 20px; }
+    min-height: 475px !important;
+    max-height: 85% !important;
+    max-width: 95% !important;
+    align-items: center !important; }
 
-.btn-toggle-twitter {
-  min-width: 90%;
-  max-width: 90%;
-  min-height: 25px;
-  background-color: #584b62; }
+.project-tabs-bar {
+  min-width: 95% !important;
+  min-height: 48px !important;
+  margin-bottom: 10px !important; }
 
-.project-tabs {
-  width: 100% !important; }
+.project-thumbnail-frame {
+  width: 95% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 420px !important;
+  max-height: 80% !important;
+  overflow: hidden !important; }
+
+.react-swipeable-view-container {
+  max-height: 100% !important;
+  max-width: 100% !important;
+  positon: relative !important; }
 
 .thumbnail {
-  height: 200px;
-  width: 200px;
-  box-shadow: 2px 2px 2px 2px;
-  transform: translateZ(2em) translateX(200px); }
-  .thumbnail:hover {
-    background-color: red;
-    border: solid red 1px; }
-  .thumbnail.tetris {
-    background-image: url("../tetrisThumbnail.png");
-    background-size: cover; }
+  max-height: 95% !important;
+  min-height: 90% !important;
+  max-width: 100% !important;
+  margin: 0px !important; }
+
+.project-card {
+  min-height: 90% !important;
+  min-width: 80% !important;
+  max-width: 100% !important;
+  margin: 0px !important; }
+
+.project-card-media {
+  max-height: 25% !important;
+  min-height: 360px !important; }
+
+.project-card-title {
+  max-height: 48px !important; }
+
+.project-card-overlay {
+  padding: 0px !important;
+  max-height: 15% !important; }
+  .project-card-overlayspan {
+    font-size: 1em !important; }
+
+.project-picture.tetris {
+  background-image: url("public/tetrisThumbnail.png");
+  background-position: center;
+  min-height: 50% !important; }
 
 /*************************************************/
 .navbar-container {
@@ -95,9 +117,20 @@ h1, h2, h3, h4, h5, h6 {
   border: solid #212F4B 1px; }
 
 .menu-item {
-  color: #bada55 !important; }
+  color: #bada55 !important;
+  width: 80% !important; }
 
 .popover-button {
   background-color: #17181A !important;
   color: #bada55 !important;
   max-width: 30%; }
+
+@media screen and (min-width: 450px) {
+  .project-card-media {
+    max-width: 400px !important;
+    margin: 0px !important; }
+    .project-card-mediaimg {
+      margin-right: auto !important;
+      margin-left: auto !important; }
+  .project-card {
+    max-width: 500px !important; } }

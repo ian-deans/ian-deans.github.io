@@ -9,18 +9,24 @@ import {
 } from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 
-const ProjectThumbnailContainer = () => (
+const ProjectCardContainer = props => (
   <Card className="project-card">
-    <CardHeader
-      title="URL Avatar"
-      subtitle="Subtitle"
-    />
+    {/*<CardHeader*/}
+      {/*title={props.title}*/}
+      {/*subtitle={props.subTitle}*/}
+    {/*/>*/}
     <CardMedia
-      overlay={<CardTitle title="Overlay title" subtitle="Overlay Subtitle"/>}
+      className="project-card-media"
+      // overlay={<CardTitle
+      //   className="project-card-overlay"
+      //   title="Overlay title"/>}
     >
-      <img src="" />
+      <img src={props.imgPath} />
     </CardMedia>
-    <CardTitle title="Card title" subtitle="Card subtitle" />
+    <CardTitle
+      className="project-card-title"
+      title="Card title"
+    />
     <CardText>
       Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb
       Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb Blurb
@@ -32,4 +38,4 @@ const ProjectThumbnailContainer = () => (
   </Card>
 )
 
-export default ProjectThumbnailContainer
+export default ProjectCardContainer

@@ -1,7 +1,7 @@
 import React from 'react'
 import SwipeableViews from 'react-swipeable-views'
 import { Tabs, Tab } from 'material-ui/Tabs'
-import ProjectThumbnailFrame from './ProjectThumbnailFrame.jsx'
+import ProjectCardFrame from './ProjectCardFrame.jsx'
 
 export default class ProjectTabFrame extends React.Component {
   constructor( props ) {
@@ -17,7 +17,7 @@ export default class ProjectTabFrame extends React.Component {
     return (
       <div className="project-tabs frame">
         <Tabs
-          className="project-tabs"
+          className="project-tabs-bar"
           onChange={this.handleChange}
           value={this.state.slideIndex}
         >
@@ -26,13 +26,13 @@ export default class ProjectTabFrame extends React.Component {
           <Tab label="Calculator" value={2} />
         </Tabs>
         <SwipeableViews
-          className="project-tabs-swipeable"
+          className="project-thumbnail-frame"
           index={this.state.slideIndex}
           onChangeIndex={this.handleChange}
         >
-          <ProjectThumbnailFrame cssClass="thumbnail tetris"/>
-          <ProjectThumbnailFrame cssClass="thumbnail blackjack"/>
-          <ProjectThumbnailFrame cssClass="thumbnail calculator"/>
+          <ProjectCardFrame imgPath="public/tetrisThumbnail.png" frameClass="thumbnail tetris"/>
+          <ProjectCardFrame imgPath="public/tetrisThumbnail.png" frameClass="thumbnail blackjack"/>
+          <ProjectCardFrame imgPath="public/tetrisThumbnail.png" frameClass="thumbnail calculator"/>
         </SwipeableViews>
       </div>
     )
