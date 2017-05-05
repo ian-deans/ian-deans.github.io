@@ -1,0 +1,38 @@
+{
+  "name": "fryymann715.github.io",
+  "version": "1.0.0",
+  "description": "Personal Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fryymann715/fryymann715.github.io.git"
+  },
+  "author": "Ian Deans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fryymann715/fryymann715.github.io/issues"
+  },
+  "homepage": "https://github.com/fryymann715/fryymann715.github.io#readme",
+  "devDependencies": {
+    "babel-core": "6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "caniuse-api": "^1.5.2",
+    "node-sass": "4.5.2",
+    "react": "15.5.4",
+    "react-dom": "15.5.4",
+    "react-swipeable-views": "^0.12.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "react-transition-group": "1.1.3",
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "material-ui": "^0.18.0"
+  }
+}
