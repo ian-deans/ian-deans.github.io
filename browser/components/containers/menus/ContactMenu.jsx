@@ -10,7 +10,7 @@ const ContactMenu = () => {
     <Menu
       className="menu-contact"
     >
-      <MenuItem className="menu-item" primaryText="twitter" secondaryText="Twitter" />
+      <MenuItem className="menu-item" primaryText="twitter" />
       <MenuItem className="menu-item" primaryText="linkedin" />
       <MenuItem className="menu-item" primaryText="udacity" />
       <MenuItem className="menu-item" primaryText="github" />

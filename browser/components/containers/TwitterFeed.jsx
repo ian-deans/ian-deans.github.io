@@ -18,8 +18,12 @@ export default class TwitterFeed extends React.Component {
           label="Twitter Feed"
           onTouchTap={this.handleToggle}
         />
-        <Drawer open={this.state.open}>
-          <AppBar title="Twitter" />
+        <Drawer
+          open={this.state.open}
+          swipeAreaWidth={30}
+          className="twitter-feed-drawer"
+        >
+          <AppBar title="Twitter" className="twitter-feed-bar" />
         </Drawer>
       </div>
     )

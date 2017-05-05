@@ -11,38 +11,42 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Righteous", cursive; }
 
 .page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
   background-color: #17181A;
   font-family: "Roboto", sans-serif;
   color: #8d979f;
-  font-size: 12px; }
+  height: 100vh;
+  width: 100vw;
+  font-size: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
 
 .frame {
-  min-width: 98%; }
+  min-width: 98%;
+  display: flex;
+  flex-direction: column; }
   .frame.navbar {
+    color: #bada55;
+    font-family: "Righteous", cursive;
     height: 16vh;
     min-height: 48px;
     display: flex;
     justify-content: center;
-    font-size: 1.75em;
-    color: #bada55;
-    font-family: "Righteous", cursive; }
+    font-size: 1.75em; }
   .frame.project-tabs {
     height: 50vh;
     min-height: 250px;
+    width: 95%;
     display: flex;
-    justify-content: center;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-around; }
   .frame.project-info {
     height: 22vh;
     min-height: 100px;
     min-width: 90%;
-    box-shadow: 2px 2px 2px 2px red;
+    box-shadow: 2px 2px red;
     padding: 20px; }
 
 .btn-toggle-twitter {
@@ -51,8 +55,11 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 25px;
   background-color: #584b62; }
 
+.project-tabs {
+  width: 100% !important; }
+
 .thumbnail {
-  height: 250px;
+  height: 200px;
   width: 200px;
   box-shadow: 2px 2px 2px 2px;
   transform: translateZ(2em) translateX(200px); }
