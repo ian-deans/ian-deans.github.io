@@ -19,6 +19,7 @@ export default class TwitterFeed extends React.Component {
           onTouchTap={this.handleToggle}
         />
         <Drawer
+          openSecondary={true}
           open={this.state.open}
           swipeAreaWidth={30}
           className="twitter-feed-drawer"

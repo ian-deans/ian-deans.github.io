@@ -44851,9 +44851,6 @@ var ProjectCardContainer = function ProjectCardContainer(props) {
       _Card.CardMedia,
       {
         className: 'project-card-media'
-        // overlay={<CardTitle
-        //   className="project-card-overlay"
-        //   title="Overlay title"/>}
       },
       _react2.default.createElement('img', { src: props.imgPath })
     ),
@@ -44947,6 +44944,7 @@ var TwitterFeed = function (_React$Component) {
         _react2.default.createElement(
           _Drawer2.default,
           {
+            openSecondary: true,
             open: this.state.open,
             swipeAreaWidth: 30,
             className: 'twitter-feed-drawer'
