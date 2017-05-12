@@ -1,7 +1,7 @@
 # Ian Deans
 My personal webpage built using React, MaterialUI, TwitterAPI, SaSS, and bundled with Webpack....soon.
 
-my.otherPages = {
+my.otherPages = [
 
 - [GitHub](http://github.com/ian-deans)
 
@@ -11,4 +11,4 @@ my.otherPages = {
 
 - [Udacity](https://profiles.udacity.com/p/3421249191)
 
-}
+]
