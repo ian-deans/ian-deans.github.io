@@ -1,199 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Yrsa:400,700');
+@import "bower_components/bulma/sass/utilities/initial-variables";
+$green: #bada55;
+$blue: #2e4a68;
+$orange: #ff6100;
+$grey: #293132;
 
-/* Colors */
-$color-alternate-background:  #212F4B;
-$color-background:            #17181A;
-$color-font-main-secondary:   #584b62;
-$color-font-main:             #8d979f;
-$color-font-header:           #bada55;
+$family-serif: "Yrsa", serif;
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Righteous|Roboto');
-$font-righteous: 'Righteous', cursive;
-$font-roboto: 'Roboto', sans-serif;
+$primary: $green;
+$danger: $orange;
 
-/* Measurements */
+$family-primary: $family-serif;
 
-$frame-width: 95%;
+$card-img: url("http://placehold.it/800x400");
+
+// @import "bower_components/bulma/sass/base/_all";
+@import "bower_components/bulma/sass/utilities/_all";
+@import "bower_components/bulma/sass/grid/_all";
+@import "bower_components/bulma/sass/elements/_all";
+@import "bower_components/bulma/sass/components/_all";
+
 
 *, *::before, *::after {
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  //border: dotted #ff0000 1px;
+  // border: solid red 1px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: $color-font-header;
-  font-family: $font-righteous;
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+//   display: flex;
+}
+
+.page, .navbar, .project-section, .page-sidebar, .page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .page {
-  background-color: $color-background;
-  font-family: $font-roboto;
-  color: $color-font-main;
-
-  height: 100vh;
-  width: 100vw;
-
-  min-height: 480px;
-  min-width: 320px;
-  font-size: 12px;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  //justify-content: space-between;
-  align-items: center;
-}
-
-.frame {
-  min-width: $frame-width;
-  display: flex;
-  flex-direction: column;
-
-  &.navbar {
-    color: $color-font-header;
-    font-family: $font-righteous;
-    max-height: 85px;
-    min-height: 48px;
-
-    display: flex;
-    justify-content: center;
-    font-size: 1.75em;
-  }
-
-  &.project-tabs {
-    min-height: 475px !important;
-    max-height: 85% !important;
-
-    max-width: 95% !important;
-    align-items: center !important;
-    //justify-content: space-around;
-  }
-
-}
-
-.project-tabs-bar {
-  min-width: $frame-width !important;
-  min-height: 48px !important;
-  margin-bottom: 10px !important;
-}
-
-.project-thumbnail-frame {
-  width: $frame-width !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-height: 420px !important;
-  max-height: 80% !important;
-  overflow: hidden !important;
-}
-
-.react-swipeable-view-container {
-  max-height: 100% !important;
-  max-width: 100% !important;
-  positon: relative !important;
-}
-
-.thumbnail {
-  max-height: 95% !important;
-  min-height: 90% !important;
-  max-width: 100% !important;
-  margin: 0px !important;
-
-
-
-}
-
-.project-card {
-  min-height: 90% !important;
-  min-width: 80% !important;
-  max-width: 100% !important;
-  margin: 0px !important;
- }
-
-.project-card-media {
-  max-height: 25% !important;
-  min-height: 360px !important;
-}
-
-.project-card-title {
-  max-height: 48px !important;
-}
-.project-card-overlay {
-  padding: 0px !important;
-  max-height: 15% !important;
-  &span {
-  font-size: 1em !important;
-
-  }
-}
-
-.project-picture {
-
-  &.tetris {
-    background-image: url('public/tetrisThumbnail.png');
-    background-position: center;
-    min-height: 50% !important;
-  }
-}
-
-/*************************************************/
-
-.navbar-container {
-  width: $frame-width;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  height: 98vh;
+  width: 98vw;
   padding: 10px;
-}
-
-.navbar-subcontainer {
-  display: flex;
-  flex-direction: row;
-  &.top {
+  min-height: 480px;
   justify-content: space-between;
+  font-size: 16px;
+  // align-self: center;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+
+.page-header, .page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15%;
+  min-height: 70px;
+  min-width: 100%;
+  background-color: $grey;
+  border-radius: 5px;
+}
+
+.navbar {
+  flex-direction: row;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+
+   .contact-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 100%;
+
+      .contact-item {
+        align-self: center;
+        text-align: center;
+      }
   }
-  &.bottom {
-    justify-content: center;
-  }
 }
 
-.menu-contact {
-  background-color: $color-background !important;
-  color: $color-font-header !important;
-  font-family: $font-roboto !important;
-  font-size: .75em !important;
-  border: solid $color-alternate-background 1px;
+.page-content {
+  height: 65%;
+  min-width: 80%;
+  max-width: 95%;
+  min-height: 300px;
+  flex-direction: row;
 }
 
-.menu-item {
-  color: $color-font-header !important;
-  width: 80% !important;
-}
+.project-section {
+  height: 100%;
 
-.popover-button {
-  background-color: $color-background !important;
-  color: $color-font-header !important;
-  max-width: 30%;
-}
-
-@media screen and (min-width: 450px) {
-  .project-card-media {
-    max-width: 400px !important;
-    margin: 0px !important;
-    //height: 400px !important;
-    &img {
-      margin-right: auto !important;
-      margin-left: auto !important;
-    }
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+    overflow: scroll;
+    box-shadow: 2px 2px 2px 2px $grey;
+    // background-color: $orange;
   }
 
   .project-card {
-    max-width: 500px !important;
+    display: none;
   }
 
-  .project-card {
+  .project-header {
+    font-size: 2em;
+    font-weight: 700;
+  }
+}
+
+.box {
+  background-color: $orange;
+}
+
+.navbar {
+  border-radius: 10px;
+}
+
+.nav-menu {
+  width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: none;
+
   }
 }
