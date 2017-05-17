@@ -32,15 +32,12 @@ const App = () => {
     <MuiThemeProvider muiTheme={muiTheme}>
       <div className="page">
         
-        <div className="navbar frame">
-          <NavBar
-            popoverLabel="Contact"
-            popoverMenu={<ContactMenu/>}
-          />
-        </div>
+        <NavBar
+          popoverLabel="Contact"
+          popoverMenu={<ContactMenu/>}
+        />
 
         <ProjectTabFrame/>
-        {/*<ProjectInfoFrame/>*/}
 
       </div>
     </MuiThemeProvider>

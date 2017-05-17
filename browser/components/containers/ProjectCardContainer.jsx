@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Card,
   CardActions,
-  CardHeader,
   CardMedia,
   CardTitle,
   CardText
@@ -11,15 +10,8 @@ import FlatButton from 'material-ui/FlatButton'
 
 const ProjectCardContainer = props => (
   <Card className="project-card">
-    {/*<CardHeader*/}
-      {/*title={props.title}*/}
-      {/*subtitle={props.subTitle}*/}
-    {/*/>*/}
     <CardMedia
       className="project-card-media"
-      // overlay={<CardTitle
-      //   className="project-card-overlay"
-      //   title="Overlay title"/>}
     >
       <img src={props.imgPath} />
     </CardMedia>
