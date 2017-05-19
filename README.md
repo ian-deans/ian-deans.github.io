@@ -1,5 +1,5 @@
 # Ian Deans
-My personal webpage built using React, MaterialUI, TwitterAPI, SaSS, and bundled with Webpack....soon.
+my.personal_site = "coming soon!"
 
 my.otherPages = [
 
