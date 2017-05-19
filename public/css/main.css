@@ -3303,22 +3303,21 @@ body {
   max-width: 95%;
   min-height: 300px;
   flex-direction: row; }
-
-.content-section {
-  height: 100%;
-  justify-content: center; }
-  .content-section .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    align-items: center;
-    justify-content: space-around;
-    overflow: auto; }
-  .content-section .project-card {
-    display: none; }
-  .content-section .project-header {
-    font-size: 2em;
-    font-weight: 700; }
+  .page-content .content-section {
+    height: 100%;
+    justify-content: center; }
+    .page-content .content-section .sub-page {
+      display: none; }
+    .page-content .content-section .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 90%;
+      align-items: flex-start;
+      justify-content: flex-start;
+      overflow: auto; }
+      .page-content .content-section .project-grid .project-card {
+        width: 40%;
+        height: auto; }
 
 .circle {
   border-radius: 50%;
@@ -3340,7 +3339,7 @@ body {
   .box:active {
     border-color: #bada55; }
 
-.blurb {
+.blurb, .content {
   font-weight: 300; }
 
 .screen-too-small-error {
@@ -3348,9 +3347,6 @@ body {
 
 .active {
   display: initial !important; }
-
-.sub-page {
-  display: none; }
 
 @media screen and (max-width: 600px) {
   .page {
