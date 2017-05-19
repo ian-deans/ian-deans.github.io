@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Yrsa:400,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,500');
 @import "bower_components/bulma/sass/utilities/initial-variables";
+
 $green: #bada55;
-$blue: #2e4a68;
-$orange: #ff6100;
+$light-green: #deeeaa;
+$darker-green: #789220;
+$blue: #50C9CE;
+$orange: #ff711a;
 $grey: #293132;
-
-$family-serif: "Yrsa", serif;
-
-$primary: $green;
+$light-grey: #C4C4C4;
+$white: #f4faff;
+$translucent-grey: rgba(125,185,232,0);
+$primary: $orange;
 $danger: $orange;
 
+$family-serif: "Yrsa", serif;
+$family-sans-serif: 'Oswald', sans-serif;
 $family-primary: $family-serif;
+$family-secondary: $family-sans-serif;
 
-$card-img: url("http://placehold.it/800x400");
-
-// @import "bower_components/bulma/sass/base/_all";
 @import "bower_components/bulma/sass/utilities/_all";
 @import "bower_components/bulma/sass/grid/_all";
 @import "bower_components/bulma/sass/elements/_all";
@@ -25,17 +29,18 @@ $card-img: url("http://placehold.it/800x400");
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  // border: solid red 1px;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-//   display: flex;
+  background: -webkit-radial-gradient( ellipse, $white 65%, $light-grey 95%  );
+  font-family: $family-sans-serif;
+  font-size: 20px;
 }
 
-.page, .navbar, .project-section, .page-sidebar, .page-content {
+.page, .navbar, .content-section, .page-sidebar, .page-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,12 +51,10 @@ body {
   height: 98vh;
   width: 98vw;
   padding: 10px;
+  padding-bottom: 50px;
   min-height: 480px;
   justify-content: space-between;
   font-size: 16px;
-  // align-self: center;
-  // margin-left: auto;
-  // margin-right: auto;
 }
 
 .page-header, .page-footer {
@@ -61,7 +64,7 @@ body {
   height: 15%;
   min-height: 70px;
   min-width: 100%;
-  background-color: $grey;
+  // background-color: $grey;
   border-radius: 5px;
 }
 
@@ -70,30 +73,40 @@ body {
   width: 95%;
   justify-content: center;
   align-items: center;
+  color: $green;
+  background: transparent;
 
-   .contact-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    min-width: 100%;
+  .nav-item {
+    .contact-button {
+      box-shadow: inset 1px -2px 5px 2px $light-grey;
+      border-radius: 15px;
+      background: -webkit-linear-gradient(top, $translucent-grey 0%, $green 100%);;
+      color: $darker_green;
+      border-color: $light-grey;
 
-      .contact-item {
-        align-self: center;
-        text-align: center;
+      &:hover {
+        box-shadow: inset 1px -2px 5px 2px $grey;
+        border-color: $grey;
       }
+
+      &:active {
+        box-shadow: inset 1px 6px 5px 2px $grey;
+      }
+    }
   }
 }
 
 .page-content {
-  height: 65%;
+  height: 80%;
   min-width: 80%;
   max-width: 95%;
   min-height: 300px;
   flex-direction: row;
 }
 
-.project-section {
+.content-section {
   height: 100%;
+  justify-content: center;
 
   .project-grid {
     display: flex;
@@ -101,9 +114,8 @@ body {
     width: 90%;
     align-items: center;
     justify-content: space-around;
-    overflow: scroll;
-    box-shadow: 2px 2px 2px 2px $grey;
-    // background-color: $orange;
+    overflow: auto;
+    // box-shadow: 2px 2px 2px 2px $grey;
   }
 
   .project-card {
@@ -116,21 +128,69 @@ body {
   }
 }
 
+.circle {
+  border-radius: 50%;
+  box-shadow: 4px 0px 20px 10px $orange;
+}
+
+.frame-border {
+  // border: 4px solid #fff;
+  // box-shadow: -8px -17px 53px 19px $grey;
+  border-radius: 50%;
+}
+
 .box {
-  background-color: $orange;
+  background: -webkit-radial-gradient(#ffffff, $orange);
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+  box-shadow: 4px 4px 0px 0px $light-grey;
+  border-radius: 50%;
+  // padding: 0px;
+
+  &:hover {
+    border-color: $grey;
+    box-shadow: 6px 6px 20px 2px $grey;
+  }
+  &:active {
+    border-color: $green;
+  }
 }
 
-.navbar {
-  border-radius: 10px;
+.blurb {
+  font-weight: 300;
 }
 
-.nav-menu {
-  width: auto;
+.screen-too-small-error {
+  display: none;
+}
+
+.active {
+  display: initial !important;
+}
+
+.sub-page {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
-  body {
+  .page {
     display: none;
 
+  }
+
+  .screen-too-small-error {
+    position: fixed;
+    top: 45%;
+    // left: 10%;
+    display: block;
+
+    .error-message {
+      display: inline;
+    }
+  }
+
+  .frame-border{
+    display: block;
   }
 }
