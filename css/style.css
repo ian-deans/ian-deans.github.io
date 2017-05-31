@@ -676,7 +676,7 @@ ul.portfolio li.active {
 
 .statistics-section {
 	position: relative;
-    background: url(../images/bg/stellar_bg.jpg);
+    /*background: url(../images/bg/stellar_bg.jpg);*/
     background-size: cover;
     z-index: 1;
 }
@@ -744,6 +744,8 @@ ul.portfolio li.active {
   top: 0px;
   padding: 60px 40px 60px 40px;
   margin-top: 32px;
+  font-size: 10px;
+  line-height: 12px;
 }
 
 .services-section .services-detail:hover {
@@ -752,8 +754,12 @@ ul.portfolio li.active {
   top: -5px;
 }
 
+.services-section .services-detail p {
+    line-height: 16px;
+}
+
 .services-section .services-detail .fa {
-  font-size: 42px;
+  font-size: 24px;
 }
 
 
@@ -842,6 +848,12 @@ ul.portfolio li.active {
     border: 1px solid #24b662;
 }
 
+
+.skill-logo {
+    width: auto;
+    margin: 5px;
+
+}
 
 
 /* Social Icons */
