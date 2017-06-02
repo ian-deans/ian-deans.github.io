@@ -9,7 +9,6 @@
 */
 
 
-
 /*
    
    Table Of Content
@@ -30,8 +29,8 @@
 
 */
 
-
 (function ($) {
+
     'use strict';
 
     jQuery(document).ready(function () {
@@ -164,10 +163,7 @@
 		  
 		  
           });
-
-       
-	   
-		 
+          
         /* Testimonial Carousel/Slider */
 
         $(".testimonial-carousel-list").owlCarousel({
