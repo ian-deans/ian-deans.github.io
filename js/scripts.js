@@ -109,7 +109,7 @@
 		
         $(window).load(function(){
         $(".typing").typed({
-            strings: ["Musician", "Gamer", "Creator", "Savior of Virtual Worlds", "Software Developer."],    /* You can change the home section typing text from
+            strings: ["Musician", "Creator", "Software Developer."],    /* You can change the home section typing text from
 	                                                                                            here and do not use "&" use "and" */
             typeSpeed: 50
           });
