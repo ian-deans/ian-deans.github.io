@@ -75,7 +75,7 @@ fieldset {
 }
 
 .section-space-padding {
-    padding: 100px 0px;
+    padding: 70px 0px;
 }
 
 .section-title {
@@ -465,7 +465,8 @@ body.loaded #preloader{
 
 .about-me p {
 	padding: 50px;
-	font-size: 15px;
+	font-size: 12px;
+    line-height: 24px;
 }
 
 /* Portfolio */
@@ -613,6 +614,10 @@ ul.portfolio li.active {
     display: flex;
     flex-direction: row;
 }
+.services-section .services-detail hr {
+    border-width: 3px;
+    border-color: #bada55;
+}
 
 /*.services-detail ul {
     margin-left: 10px;
@@ -653,6 +658,8 @@ ul.portfolio li.active {
 .education-section {
 	overflow: hidden;
 	background-color: #f2f2f2;
+    font-size: 12px;
+    line-height: 24px;
 }
 .education-section .section-title p {
 	padding: 20px;
@@ -683,10 +690,22 @@ ul.portfolio li.active {
     border-color: #bada55;
 }
 
+.education-section .education-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.education-section .education-detail ul {
+    width: 396px;
+    margin: 10px;
+    line-height: 20px;
+}
 
 .education-section .education-detail p {
     font-size: 10px;
     line-height: 17px;
+    max-width: 45%;
+    margin: 10px;
 }
 
 
@@ -788,7 +807,6 @@ ul.portfolio li.active {
   list-style: none;
   padding-left: 0;
   margin: 0;
-  text-align: center;
 }
 
 .social-icon:before,
@@ -816,14 +834,13 @@ ul.portfolio li.active {
   border: 0 none;
   border-radius: 4px;
   font-size: 30px;
-  box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
   transition: all 0.3s ease-in-out;
   border-radius: 40%;
 }
 
 .social-icon li a:hover {
-   box-shadow: 0px 8px 15px 5px rgba(90, 91, 95, 0.33);
-  border-radius: 50%;
+box-shadow: 0px 0px 12px 2px #bada55;
+border-radius: 50%;
 }
 
 .social-icon li a .fa {
@@ -886,11 +903,13 @@ form textarea {
   height: 100px;
 }
 form button {
-  border: 1px solid rgba(13,13,13,0.2);
+  border: 1px solid #bada55;
   padding: 8px 35px;
   font-size: 12px;
   background: #0d0d0d;
   color: #f8f8f8;
+  border-radius: 50px;
+  text-transform: uppercase;
 }
 form label {
   color: #0d0d0d;
