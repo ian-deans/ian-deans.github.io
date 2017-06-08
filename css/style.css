@@ -468,18 +468,6 @@ body.loaded #preloader{
 	font-size: 15px;
 }
 
-/* Education */
-
-.education-section {
-	overflow: hidden;
-	background-color: #f8f8f8;
-}
-.education-section p {
-	padding: 50px;
-	font-size: 15px;
-}
-
-
 /* Portfolio */
 
 .portfolio {}
@@ -617,39 +605,89 @@ ul.portfolio li.active {
 .services-section {
   background-color: #f8f8f8;
   box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.services-section hr {
-  border-bottom: 2px solid #bada55;
-  width: 42px;
-  margin-left: 0px;
+.services-detail .services-title {
+    display: flex;
+    flex-direction: row;
 }
+
+/*.services-detail ul {
+    margin-left: 10px;
+}*/
 
 .services-section .services-detail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 4px;
-  border-bottom-right-radius: 20%;
-  background-color: #f8f8f8;
-  box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 70px;
+  background-color: #fafafa;
+  box-shadow: 0px 3px 29px 0px rgba(90, 91, 95, 0.15);
   transition: all 0.3s ease-in-out;
   position: relative;
   top: 0px;
-  padding: 40px 20px 40px 20px;
+  padding: 20px 20px 20px 0px;
   margin-top: 32px;
   font-size: 10px;
   line-height: 12px;
-  height: 365px;
+  height: 120px;
+  width: 240px;
 }
 
-.services-section .services-detail:hover {
+/*.services-section .services-detail:hover {
   border-bottom-right-radius: 4px;
   box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
   top: -5px;
-}
+}*/
 
 .services-section .services-detail p {
     line-height: 16px;
 }
 
+/* Education */
+
+.education-section {
+	overflow: hidden;
+	background-color: #f2f2f2;
+}
+.education-section .section-title p {
+	padding: 20px;
+	font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    text-shadow: none;
+}
+
+.education-section .education-detail {
+    position: relative;
+    border-radius: 4px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #f8f8f8;
+    padding: 25px;
+    box-shadow: 0px 3px 29px 0px rgba(90, 91, 95, 0.15);
+    transition: all 0.5s ease-in-out;
+    margin: 20px;
+} 
+
+.education-section .education-detail h3 {
+    text-shadow: 1px 1px 4px #666;
+}
+
+.education-section .education-detail hr {
+    border-width: 3px;
+    border-color: #bada55;
+}
+
+
+.education-section .education-detail p {
+    font-size: 10px;
+    line-height: 17px;
+}
 
 
 /* Call to Action */
