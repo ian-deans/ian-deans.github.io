@@ -906,8 +906,9 @@ form button {
   border: 1px solid #bada55;
   padding: 8px 35px;
   font-size: 12px;
+  font-weight: 600;
   background: #0d0d0d;
-  color: #f8f8f8;
+  color: #bada55;
   border-radius: 50px;
   text-transform: uppercase;
 }
