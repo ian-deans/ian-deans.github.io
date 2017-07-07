@@ -109,8 +109,7 @@
 		
         $(window).load(function(){
         $(".typing").typed({
-            strings: ["Musician", "Creator", "Software Developer."],    /* You can change the home section typing text from
-	                                                                                            here and do not use "&" use "and" */
+            strings: ["Not a Politician.", "Not a Professional Skier.", "A Software Developer."],	                                                                                           
             typeSpeed: 50
           });
          });
