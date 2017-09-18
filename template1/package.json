@@ -1,0 +1,26 @@
+{
+  "name": "fryymann715.github.io",
+  "version": "3.0.0",
+  "description": "Personal Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css",
+    "watch:sass": "node-sass -w --include-path scss scss/main.scss public/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fryymann715/fryymann715.github.io.git"
+  },
+  "author": {
+    "name": "Ian Deans",
+    "email": "ideans715@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fryymann715/fryymann715.github.io/issues"
+  },
+  "homepage": "https://github.com/fryymann715/fryymann715.github.io#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}
