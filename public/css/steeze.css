@@ -8,6 +8,11 @@ body {
     padding-top: 54px;
 }
 
+.card {
+  font-size: 10px;
+  
+}
+
 @media (min-width: 992px) {
     body {
         padding-top: 56px;
