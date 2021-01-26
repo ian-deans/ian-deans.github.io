@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --light-color: #e0fbfc;
+    --accent-color: #3d5a80;
+    --dark-color: #293241;
+
+    --white: #fafafa;
+
+    --heading-font: 'Architects Daughter', cursive;
+    --basic-font: 'Montserrat', sans-serif;
+
+    --large-padding: 3rem;
+    --small-padding: 2rem;
+}
+
+body {
+    background-color: var(--light-color);
+
+    font-size: 16px;
+    font-family: var(--basic-font);
+
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    display: grid;
+
+    grid-template-rows: minmax(400px, auto) 80px repeat(4, 1fr);
+    grid-template-columns: 10% auto 10%;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        ". articles ."
+        ". codesources ."
+        ". coding ."
+        ". jobsites .";
+
+    justify-items: stretch;
+}
+
+header {
+    grid-area: header;
+
+    background-color: var(--accent-color);
+    font-family: var(--heading-font);
+    color: var(--white);
+
+    padding: var(--large-padding);
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+header div {
+    padding: var(--large-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: var(--basic-font);
+}
+
+header div h2 {
+    font-size: 46px;
+    font-family: var(--heading-font);
+}
+
+section {
+    min-height: 300px;
+    padding: var(--small-padding);
+
+    /* background-color: red; */
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+    align-items: center;
+}
+
+section h3 {
+    font-family: var(--heading-font);
+}
+
+#avatar img {
+    border-radius: 25%;
+    box-shadow: 7px 8px 11px white;
+}
+
+#navbar {
+    grid-area: nav;
+    background-color: var(--dark-color);
+    color: var(--white);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#articles {
+    grid-area: articles;
+}
+#codesources {
+    grid-area: codesources
+}
+#coding {
+    grid-area: coding;
+}
+#jobsites {
+    grid-area: jobsites;
+}
+
+
+.flx {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
