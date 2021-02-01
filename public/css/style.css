@@ -10,16 +10,20 @@
     --dark-color: #293241;
 
     --white: #fafafa;
+    --black: #222;
 
     --heading-font: 'Architects Daughter', cursive;
     --basic-font: 'Montserrat', sans-serif;
 
     --large-padding: 3rem;
     --small-padding: 2rem;
+
+    --white-border: solid 1px var(--white);
 }
 
 body {
-    background-color: var(--light-color);
+    background-color: var(--black);
+    color: var(--white);
 
     font-size: 16px;
     font-family: var(--basic-font);
@@ -31,7 +35,7 @@ body {
     position: absolute;
     display: grid;
 
-    grid-template-rows: minmax(400px, auto) 80px repeat(4, 1fr);
+    grid-template-rows: minmax(400px, auto) 80px repeat(5, 1fr);
     grid-template-columns: 10% auto 10%;
     grid-template-areas:
         "header header header"
@@ -39,9 +43,23 @@ body {
         ". articles ."
         ". codesources ."
         ". coding ."
-        ". jobsites .";
+        ". jobsites ."
+        ". games .";
 
     justify-items: stretch;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+a:hover {
+    font-size: 20px;
+}
+
+a:visited {
+    color: var(--white);
 }
 
 header {
@@ -75,22 +93,27 @@ section {
     min-height: 300px;
     padding: var(--small-padding);
 
-    /* background-color: red; */
-
     display: flex;
     flex-direction: column;
 
     justify-content: start;
     align-items: center;
+
+    border-bottom: var(--white-border);
+}
+
+section:last-child {
+    border: none;
 }
 
 section h3 {
     font-family: var(--heading-font);
+    margin-bottom: 1rem;
 }
 
 #avatar img {
     border-radius: 25%;
-    box-shadow: 7px 8px 11px white;
+    box-shadow: 7px 8px 11px var(--white);
 }
 
 #navbar {
@@ -101,6 +124,9 @@ section h3 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    border-top: var(--white-border);
+    border-bottom: var(--white-border);
 }
 
 #articles {
@@ -114,6 +140,9 @@ section h3 {
 }
 #jobsites {
     grid-area: jobsites;
+}
+#games {
+    grid-area: games;
 }
 
 
