@@ -108,6 +108,7 @@ section:last-child {
 
 section h3 {
     font-family: var(--heading-font);
+    margin-bottom: 1rem;
 }
 
 #avatar img {
